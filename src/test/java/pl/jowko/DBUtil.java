@@ -2,7 +2,7 @@ package pl.jowko;
 
 import java.util.Arrays;
 
-import javax.persistence.EntityManager;
+import jakarta.persistence.EntityManager;
 
 class DBUtil
 {

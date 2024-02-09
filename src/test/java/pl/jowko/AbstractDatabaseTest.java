@@ -2,9 +2,9 @@ package pl.jowko;
 
 import java.util.List;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityTransaction;
-import javax.persistence.PersistenceException;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityTransaction;
+import jakarta.persistence.PersistenceException;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -14,10 +14,10 @@ import com.github.database.rider.core.api.configuration.Orthography;
 import com.github.database.rider.core.api.connection.ConnectionHolder;
 import com.github.database.rider.core.configuration.DataSetConfig;
 import com.github.database.rider.core.dsl.RiderDSL;
-import com.github.database.rider.core.util.EntityManagerProvider;
-import com.github.database.rider.junit5.DBUnitExtension;
 
 import lombok.SneakyThrows;
+import pl.jowko.rider.DBUnitExtension;
+import pl.jowko.rider.EntityManagerProvider;
 
 @ExtendWith( DBUnitExtension.class )
 @DBUnit( caseInsensitiveStrategy = Orthography.UPPERCASE, qualifiedTableNames = true )
