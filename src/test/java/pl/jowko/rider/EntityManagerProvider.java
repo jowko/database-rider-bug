@@ -14,6 +14,7 @@ import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Persistence;
 
 import org.hibernate.Session;
+import org.hibernate.engine.spi.SessionImplementor;
 import org.junit.rules.TestRule;
 import org.junit.runner.Description;
 import org.junit.runners.model.Statement;
@@ -148,9 +149,10 @@ public class EntityManagerProvider implements TestRule
         final EntityTransaction tx = em.getTransaction();
         if( isHibernateOnClasspath() && em.getDelegate() instanceof Session )
         {
-            connection = em.unwrap( org.hibernate.engine.spi.SessionImplementor.class )
-                .getJdbcConnectionAccess()
-                .obtainConnection();
+            connection = em.unwrap( SessionImplementor.class )
+                .getJdbcCoordinator()
+                .getLogicalConnection()
+                .getPhysicalConnection();
         }
         else
         {

@@ -63,18 +63,18 @@
         <!-- Java EE variant, works correctly -->
 
         <!-- Jakarta variant, datasets are not inserted to database -->
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-core-jakarta</artifactId>
-            <version>5.6.15.Final</version>
-            <scope>provided</scope>
-        </dependency>
         <!--        <dependency>-->
         <!--            <groupId>org.hibernate</groupId>-->
-        <!--            <artifactId>hibernate-core</artifactId>-->
-        <!--            <version>6.2.13.Final</version>-->
+        <!--            <artifactId>hibernate-core-jakarta</artifactId>-->
+        <!--            <version>5.6.15.Final</version>-->
         <!--            <scope>provided</scope>-->
         <!--        </dependency>-->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>6.2.13.Final</version>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>com.github.database-rider</groupId>
             <artifactId>rider-junit5</artifactId>
