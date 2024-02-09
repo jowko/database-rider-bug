@@ -1,0 +1,3 @@
+public.TEST_ENTITY:
+  - ID: "test-id"
+    NAME: "test-name"
